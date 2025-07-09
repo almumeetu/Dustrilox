@@ -1,0 +1,135 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  03. Process CSS START
+/*----------------------------------------*/
+
+//process
+.process{
+    &__area{
+        @include background();
+		position: relative;
+    }
+    &__images{
+        @media #{$lg,$md,$sm,$xs} {
+            margin-bottom: 50px;
+        }
+        & .image-2{
+            margin-top: 100px;
+            @media #{$xs} {
+                margin-top: 60px;
+            }
+        }
+    }
+    &__right{
+        margin-left: 70px;
+        @media #{$md,$sm,$xs} {
+            margin-left: 0;
+        }
+    }
+    &__list{
+        &-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--tp-border-2);
+        }
+        &-info{
+            display: flex;
+            align-items: center;
+        }
+        &-icon{
+            margin-right: 20px;
+            & i{
+                font-size: 50px;
+                color: var(--tp-theme-1);
+            }
+        }
+        &-content{
+            & span{
+                font-size: 14px;
+                display: inline-block;
+            }
+            & h5{
+                font-size: 24px;
+                margin-bottom: 0;
+                transition: .3s;
+                @media #{$xs} {
+                    font-size: 18px;
+                }
+                &:hover{
+                    color: var(--tp-theme-1);
+                }
+            }
+            & .process__list-item-title{
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+        &-sp-icon{
+            & i{
+                font-size: 20px;
+                color: var(--tp-theme-1);
+                font-weight: var(--tp-fw-regular);
+            }
+        }
+        &-icon2{
+            & img{
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+    &__item{
+        padding: 50px 30px;
+        padding-bottom: 15px;
+        border: 1px solid var(--tp-border-2);
+        box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.04);
+        background: var(--tp-common-white);
+        transition: .3s;
+        @media #{$lg} {
+            padding: 50px 0px;
+        }
+        &:hover{
+            box-shadow: none;
+            .process__more{
+                & a{
+                    background: var(--tp-theme-1);
+                    color: var(--tp-common-white);
+                    border-color:  var(--tp-theme-1);
+                }
+            }
+        }
+    }
+    &__content{
+        & .p-name{
+            font-size: 20px;
+            @media #{$xl,$lg} {
+                font-size: 18px;
+            }
+            &:hover{
+                color: var(--tp-theme-1);
+            }
+        }
+    }
+    &__more{
+        transform: translateY(40px);
+        & a{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid var(--tp-border-2);
+            display: inline-block;
+            border-radius: 50%;
+            background: var(--tp-common-white);
+            transition: .3s;
+            & i{
+                font-size: 18px;
+            }
+        }
+    }
+    &__text{
+        font-size: 16px;
+    }
+}

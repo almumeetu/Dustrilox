@@ -1,0 +1,2 @@
+sass --watch C:\Users\Admin\Dropbox\Iqbal\dustrilox\assets\scss\main.scss:C:\Users\Admin\Dropbox\Iqbal\dustrilox\assets\css\style.css
+

@@ -1,0 +1,82 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  00. Fact CSS START
+/*----------------------------------------*/
+.fact{
+    &__bg{
+        background: var(--tp-heading-primary);
+        position: relative;
+        z-index: 1;
+        &::before{
+            position: absolute;
+            content: '';
+            background: var(--tp-theme-1);
+            width: 35%;
+            left: 0;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            @media #{$md,$sm,$xs} {
+                display: none;
+            }
+        }
+    }
+    &__image{
+        & img{
+            border-radius: 6px;
+        }
+    }
+    &__info{
+        margin-left: 70px;
+        @media #{$lg} {
+            margin-left: 50px;
+        }
+        @media #{$md,$sm,$xs} {
+            margin-left: 0;
+            margin-top: 50px;
+        }
+        & .section__wrapper{
+            & h4{
+                color: var(--tp-common-white);
+            }
+            & .r-text{
+                & span{
+                    color: #60666d;
+                }
+            }
+        }
+    }
+    &__content{
+        &-item{
+            display: flex;
+            align-items: center;
+            &-des{
+                & h6{
+                    font-size: 24px;
+                    color: var(--tp-common-white);
+                }
+                & p{
+                    color: #aeb4ba;
+                    margin-bottom: 0;
+                }
+            }
+            &-border{
+                border-bottom: 1px solid#545a60;
+            }
+        }
+        & .fc-text{
+            color: var(--tp-common-white);
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+    &__progress-circular{
+        margin-right: 30px;
+        & .knob{
+            color: var(--tp-common-white) !important;
+            font-size: 24px !important;
+            font-weight: var(--tp-fw-sbold) !important;
+        }
+    }
+}

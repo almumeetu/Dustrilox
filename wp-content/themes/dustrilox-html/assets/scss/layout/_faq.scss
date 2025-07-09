@@ -1,0 +1,140 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  04. Faq CSS START
+/*----------------------------------------*/
+.faq{
+    &__area{
+        .faq__content{
+            margin-right: 60px;
+            @media #{$lg} {
+                margin-right: 10px;
+            }
+            @media #{$md,$sm,$xs} {
+                margin-right: 0;
+            }
+            .accordion-button {
+                border: 0;
+                font-size: 18px;
+                line-height: 1.4;
+                color: var(--tp-heading-primary);
+                padding-left: 0;
+                font-weight: var(--tp-fw-sbold);
+                position: relative;
+                padding: 25px 0;
+                & span{
+                    color: #c0c1c1;
+                    margin-right: 5px;
+                    display: inline-block;
+                }
+                &:hover{
+                    color: var(--tp-theme-1);
+                }
+            }
+            .accordion-collapse{
+                border: 0;
+            }
+            .accordion-button:not(.collapsed) {
+                background: transparent;
+                color: inherit;
+                & span{
+                    color: var(--tp-theme-1);
+                }
+            }
+            .accordion-body {
+                padding-left: 0;
+                padding-top: 0;
+                & p {
+                    font-size: 16px;
+                    line-height: 25px;
+                    margin-bottom: 0;
+                }
+            }
+            .accordion-item {
+                border-left: 0;
+                border-right: 0;
+            }
+            .accordion-button:focus {
+                box-shadow: none;
+            }
+            .accordion-button::after{
+                content: "\f067";
+                background-image: none;
+                font-family: "Font Awesome 6 Pro";
+                position: absolute;
+                left: 0;
+                right: 10px;
+                color: #c0c1c1;
+                top: 20%;
+                @media #{$xs} {
+                    right: 5px;
+                }  
+            }
+            .accordion-button:not(.collapsed)::after{
+                background-image: none;
+                content: '\f068';
+                transform: rotate(0deg);
+                color: var(--tp-theme-1);
+            }
+        }
+    }
+    &__left{
+        &-info{
+            margin-left: 60px;
+            @media #{$md,$sm,$xs} {
+                margin-left: 0;
+                margin-top: 55px;
+            }
+        }
+    }
+    &__accordion-2{
+        & .sm-accordion-item{
+            border-radius: 6px;
+            border-bottom: 0;
+            & .sm-accordion-button{
+                box-shadow: none;
+                outline: none;
+                font-size: 18px;
+                font-weight: var(--tp-fw-medium);
+                padding: 20px 30px;
+                border-radius: 6px;
+                transition: .3s;
+                &:hover{
+                    color: var(--tp-theme-1);
+                }
+                &:focus{
+                    box-shadow: none;
+                    outline: none;
+                }
+                &:not(.collapsed) {
+                    color: var(--tp-common-white);
+                    background-color: var(--tp-theme-1);
+                    box-shadow: none;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                  }
+            }
+            & .accordion-body{
+                background: var(--tp-theme-1);
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                padding: 30px 30px;
+                padding-top: 0;
+                & p{
+                    color: var(--tp-common-white);
+                    font-size: 16px;
+                    margin-bottom: 0;
+                    line-height: 26px;
+                }
+            }
+            & .accordion-button::after{
+                content: "\f178";
+                background-image: none;
+                font-family: "Font Awesome 6 Pro";
+            }
+        }
+    }
+    &__image{
+        position: relative;
+    }
+}

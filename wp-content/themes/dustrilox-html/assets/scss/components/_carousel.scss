@@ -1,0 +1,220 @@
+@use '../utils' as *;
+/*--
+    - Carousel
+-----------------------------------------*/
+// slider button
+.ms-button{
+    font-size: 20px;
+    background-color: rgba(10, 10, 10, 0.7);
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+    font-size: 20px;
+    color: var(--tp-common-white);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 9;
+    text-align: center;
+    top: 50%;
+    margin: 0px;
+    vertical-align: middle;
+    transition: all 0.3s ease-out 0s;
+    &::after{
+        display: none;
+    }
+    &:hover{
+        background: var(--tp-theme-1);
+        color: var(--tp-common-white);
+    }
+}
+.ms-button{
+    @media #{$xs} {
+        display: none;
+    }
+}
+.swiper-button-next{
+    @media #{$lg} {
+        right: 40px;
+    }
+    @media #{$md} {
+        right: 25px;
+    }
+    @media #{$sm} {
+        right: 5px;
+    }
+    right: 80px;
+    left: auto;
+}
+.swiper-button-prev{
+    @media #{$lg} {
+        left: 40px;
+    }
+    @media #{$md,$sm} {
+        left: 25px;
+    }
+    @media #{$sm} {
+        left: 5px;
+    }
+    left: 80px;
+    right: auto;
+}
+
+// slider button-2
+.ms-button-2{
+    font-size: 20px;
+    background-color: var(--tp-common-white);
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    color: var(--tp-heading-primary);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 9;
+    text-align: center;
+    top: 50%;
+    margin: 0px;
+    vertical-align: middle;
+    transition: all 0.3s ease-out 0s;
+    position: absolute;
+    &::after{
+        display: none;
+    }
+    &:hover{
+        background: var(--tp-theme-1);
+        color: var(--tp-common-white);
+    }
+    @media #{$lg,$md} {
+        top: 82%;
+    }
+}
+.ms-button-2{
+    @media #{$xs,$sm} {
+        display: none;
+    }
+}
+
+// slider button-3
+.ms-button-3{
+    font-size: 14px;
+    position: relative;
+    font-weight: var(--tp-fw-sbold);
+    color: #c6c9cd;
+    & i{
+        margin: 0 5px;
+    }
+    &::after{
+        display: none;
+    }
+    &:hover{
+        color: var(--tp-theme-1);
+    }
+    @media #{$xs} {
+        display: none;
+    }
+    &-border{
+        &::before{
+            position: absolute;
+            content: "";
+            background: #c6c9cd;
+            width: 2px;
+            height: 10px;
+            top: 50%;
+            right: -18px;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+//ms button
+.ms-button-4{
+    & i{
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        background: var(--tp-common-white);
+        color: var(--tp-heading-primary);
+        text-align: center;
+        font-size: 20px;
+        border-radius: 6px;
+        transition: .3s;
+        &:hover{
+            background: var(--tp-theme-1);
+            color: var(--tp-common-white);
+        }
+    }
+}
+
+//project arrow
+.project__slider-arrow-wrapper {
+    display: flex;
+    justify-content: end;
+    @media #{$sm} {
+        justify-content: start;
+    }
+    @media #{$xs} {
+        display: none;
+    }
+  }
+
+.project__slider-arrow{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+//realted slider arrow  
+.related__services-arrow{
+    position: absolute;
+    right: 16%;
+    top: 13%;
+    width: 115px;
+    display: flex;
+    justify-content: space-between;
+    
+    @media #{$sm} {
+        top: 10%;
+    }
+
+    @media #{$xs} {
+        top: 12%;
+        right: 12%;
+    }
+}
+
+//testimonial pagination
+.ts-pagination{
+    top: 50%;
+    right: 0;
+    text-align: right;
+    & .swiper-pagination-bullet {
+        width: 5px;
+        height: 20px;
+        display: block;
+        border-radius: 6px;
+        background: #000;
+        margin: 5px 0 !important;
+        position: relative;
+    }
+    & .swiper-pagination-bullet-active {
+        background: var(--tp-theme-1);
+        height: 30px;
+    }
+}
+.ts-pagination{
+     &.swiper-pagination-bullets {
+        bottom: auto;
+        left: auto;
+        width: auto;
+        position: absolute;
+        right: 20px;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
